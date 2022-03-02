@@ -26,3 +26,11 @@ const loadWeatherApi = async ()=>{
     }
 
 }
+
+document.getElementById('city-name').addEventListener('keypress', function(event){
+
+    if(event.keyCode == 13){
+        loadWeatherApi();
+        event.preventDefault();
+    }
+})
